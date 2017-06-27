@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="j6w-pb-dQs">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="8ve-k3-25r">
+            <objects>
+                <navigationController id="j6w-pb-dQs" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="l2q-z0-rO2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="aKx-Hc-xQd" kind="relationship" relationship="rootViewController" id="unQ-BU-w00"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FxW-xD-Xl4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-717" y="115"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qh9-Ei-vmP">
+            <objects>
+                <viewController id="aKx-Hc-xQd" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="REg-jJ-lJk"/>
+                        <viewControllerLayoutGuide type="bottom" id="CWV-ie-aXn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TCt-cN-1Ib">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHr-WT-HgO">
+                                <rect key="frame" x="50" y="114" width="275" height="30"/>
+                                <color key="backgroundColor" red="0.50196078430000002" green="0.80392156859999997" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="JS调用OC">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goWebviewAction:" destination="aKx-Hc-xQd" eventType="touchUpInside" id="OBq-jE-U4c"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSi-O2-JL2">
+                                <rect key="frame" x="50" y="192" width="275" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.50196078430000002" green="0.80392156859999997" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="JavaScript 调用">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goLocalAction:" destination="aKx-Hc-xQd" eventType="touchUpInside" id="bON-A4-aim"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PHr-WT-HgO" firstAttribute="leading" secondItem="TCt-cN-1Ib" secondAttribute="leading" constant="50" id="4x5-aY-L6W"/>
+                            <constraint firstAttribute="trailing" secondItem="PHr-WT-HgO" secondAttribute="trailing" constant="50" id="B7p-ea-vJp"/>
+                            <constraint firstItem="PHr-WT-HgO" firstAttribute="top" secondItem="REg-jJ-lJk" secondAttribute="bottom" constant="50" id="gTm-0g-UAv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Z6l-su-C8B"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uqX-sC-M8E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="114.69265367316342"/>
+        </scene>
+    </scenes>
+</document>
