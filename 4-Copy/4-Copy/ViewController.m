@@ -36,15 +36,16 @@
     button.frame = CGRectMake(0, 0, 50, 50);
     [button setImage:[UIImage imageNamed:@"test"] forState:UIControlStateNormal];
     [button setImageEdgeInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
-    
+    [button addTarget:self action:@selector(test:) forControlEvents:UIControlEventTouchUpInside];
     [view addSubview:button];
     
     [self.view addSubview:view];
 }
 
-- (void)test {
-    NSLog(@"按钮点击了");
+- (void)test:(UIButton *)sender {
+      NSLog(@"按钮点击了");
 }
+
 
 - (void)copyTest {
     NSString *string = @"FlyElephant";
