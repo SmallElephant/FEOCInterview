@@ -103,11 +103,11 @@
     __weak typeof(self)weakSelf = self;
 
     dispatch_source_set_event_handler(timer, ^{
-        bottomCount -= 1;
         if (bottomCount <= 0) {
             //关闭定时器
             dispatch_source_cancel(timer);
         }else {
+            bottomCount -= 1;
             dispatch_async(dispatch_get_main_queue(), ^{
                 weakSelf.bottomLabel.text = [NSString stringWithFormat:@"%ld",bottomCount];
             });
