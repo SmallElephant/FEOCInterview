@@ -48,6 +48,8 @@
     if ([self.timer isValid]) {
         [self.timer invalidate];
     }
+    
+    [self.displayLink invalidate];
 }
 
 - (void)dealloc {
@@ -103,6 +105,7 @@
     __weak typeof(self)weakSelf = self;
 
     dispatch_source_set_event_handler(timer, ^{
+
         if (bottomCount <= 0) {
             //关闭定时器
             dispatch_source_cancel(timer);
