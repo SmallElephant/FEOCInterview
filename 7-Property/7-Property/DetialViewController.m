@@ -19,6 +19,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setUp];
+    NSLog(@"Current method: %@ %@",[self class],NSStringFromSelector(_cmd));
+    
+    [self performSelector:@selector(test) withObject:nil withObject:nil];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -53,6 +56,10 @@
     }];
     
     
+}
+
+- (void)test {
+    NSLog(@"sel方法测试");
 }
 
 @end
